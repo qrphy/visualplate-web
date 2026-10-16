@@ -1561,3 +1561,70 @@ h1 {
     display: none;
   }
 }
+
+/* Floating navigation: clear at the top, smoked glass while scrolling. */
+.page-shell {
+  padding-top: 100px;
+}
+.header.wrap {
+  position: fixed;
+  z-index: 50;
+  top: max(16px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1208px, calc(100% - 48px));
+  margin: 0;
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  isolation: isolate;
+  transition:
+    color 240ms ease,
+    background-color 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+.header.is-scrolled {
+  color: #fff;
+  background: rgba(28, 28, 30, 0.86);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 28px rgba(0, 0, 0, 0.14);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+  backdrop-filter: blur(24px) saturate(145%);
+}
+.header .button-small {
+  color: var(--ink);
+  border-radius: 999px;
+}
+.header.is-scrolled nav a:hover {
+  color: #ffd6c9;
+}
+.header.is-scrolled a:focus-visible {
+  outline-color: #fff;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .header.is-scrolled {
+    background: #242426;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 110px;
+  }
+  .page-shell {
+    padding-top: 86px;
+  }
+  .header.wrap {
+    width: calc(100% - 24px);
+    top: max(12px, env(safe-area-inset-top));
+    padding: 10px 12px;
+  }
+  .header .brand {
+    font-size: 19px;
+    letter-spacing: -0.7px;
+  }
+}
