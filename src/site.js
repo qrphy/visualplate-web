@@ -51,3 +51,21 @@ if (footer) {
 }
 updateFooter();
 updateScroll();
+
+const mobileMenu = document.querySelector(".mobile-menu");
+const closeMenu = () => {
+  if (mobileMenu) mobileMenu.open = false;
+};
+mobileMenu?.addEventListener("click", (event) => {
+  if (event.target.closest("a")) closeMenu();
+});
+document.addEventListener("click", (event) => {
+  if (!header?.contains(event.target)) closeMenu();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && mobileMenu?.open) {
+    closeMenu();
+    mobileMenu.querySelector("summary").focus();
+  }
+});
+window.matchMedia("(min-width: 901px)").addEventListener("change", closeMenu);

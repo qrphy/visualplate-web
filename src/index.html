@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
     <meta name="robots" content="noindex,nofollow" />
     <title>Visual Plate — Explore dishes from a menu</title>
     <meta
@@ -28,11 +31,22 @@
           >Visual Plate</span
         ></a
       >
-      <nav aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#how-it-works">How it works</a><a href="#plans">Plans</a
         ><a href="#faq">FAQ</a>
       </nav>
       <a class="button button-small" href="#download">Get the app</a>
+      <details class="mobile-menu">
+        <summary aria-label="Navigation menu">
+          <span></span><span></span>
+        </summary>
+        <nav aria-label="Mobile navigation">
+          <a href="#how-it-works">How it works</a>
+          <a href="#plans">Plans</a>
+          <a href="#faq">FAQ</a>
+          <a href="/support/">Support</a>
+        </nav>
+      </details>
     </header>
     <div class="page-shell">
       <main id="main">
