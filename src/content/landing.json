@@ -1,0 +1,156 @@
+{
+  "language": "en",
+  "brand": "Visual Plate",
+  "navigation": [
+    {
+      "label": "How it works",
+      "href": "#how-it-works"
+    },
+    {
+      "label": "Plans",
+      "href": "#plans"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    },
+    {
+      "label": "Support",
+      "href": "/support"
+    }
+  ],
+  "hero": {
+    "eyebrow": "A little clarity before you order.",
+    "title": "Meet your next favorite dish.",
+    "body": "Turn an unfamiliar menu into dishes you can explore. Scan, see what’s inside, and save the discoveries you want to come back to.",
+    "cta": "Get Visual Plate",
+    "prelaunch": "Coming to the App Store",
+    "note": "Create an account to explore your first 3 dishes free."
+  },
+  "howItWorks": [
+    {
+      "title": "Point at the menu",
+      "body": "Take a menu photo in the app or choose one from your gallery."
+    },
+    {
+      "title": "Get to know the dishes",
+      "body": "Explore dish images and explanations before you decide what to order."
+    },
+    {
+      "title": "Keep your discoveries",
+      "body": "Revisit your opened results and save favorites in your Library."
+    }
+  ],
+  "features": {
+    "title": "Less guessing. More discovering.",
+    "items": [
+      "Explore dishes from a menu",
+      "Keep opened results in your Library",
+      "Make it yours with premium characters and app icons"
+    ]
+  },
+  "plans": {
+    "title": "Find your appetite for discovery.",
+    "body": "Two monthly options. Subscribe in the app.",
+    "items": [
+      {
+        "id": "entry",
+        "publicName": null,
+        "price": null,
+        "monthlyDishAllowance": null,
+        "detailEntitlements": null
+      },
+      {
+        "id": "higher",
+        "publicName": null,
+        "price": null,
+        "monthlyDishAllowance": null,
+        "detailEntitlements": null
+      }
+    ],
+    "premiumCharacterPlanMapping": null,
+    "releaseNote": "Names, pricing, allowances, extra details and character entitlements must match the confirmed StoreKit catalog before publication."
+  },
+  "faq": [
+    {
+      "q": "What do I get for free?",
+      "a": "Create an eligible new account to receive a one-time allowance for 3 dish results. This is not a recurring allowance or an automatically renewing subscription trial."
+    },
+    {
+      "q": "Does one menu use one allowance?",
+      "a": "Your allowance counts dish results, not menu photos. For example, with 3 dishes remaining, a menu with 4 dishes can show 3 opened results and a locked fourth result."
+    },
+    {
+      "q": "Do I need an account?",
+      "a": "You can explore the app before signing in. An account is required to claim the free dish allowance and begin scanning."
+    },
+    {
+      "q": "What happens to unused monthly dishes?",
+      "a": "Monthly allowances reset with the subscription period. Unused allowance does not roll over."
+    },
+    {
+      "q": "Can I revisit results after my subscription ends?",
+      "a": "Yes. Your previously opened results remain accessible after your subscription expires. Opening new results requires available allowance."
+    },
+    {
+      "q": "Where do I subscribe or restore a purchase?",
+      "a": "Subscriptions and purchase restoration are handled inside the iPhone app. You can manage or cancel an Apple subscription through your Apple account settings."
+    },
+    {
+      "q": "Can I rely on the app for allergies?",
+      "a": "Dish information and images are for discovery and may not match the restaurant’s preparation. Confirm ingredients, allergens and dietary needs directly with the restaurant."
+    }
+  ],
+  "closing": {
+    "title": "A new menu. A little more confidence.",
+    "cta": "Get Visual Plate"
+  },
+  "footer": [
+    {
+      "label": "Support",
+      "href": "/support"
+    },
+    {
+      "label": "Terms",
+      "href": "/terms"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy"
+    },
+    {
+      "label": "Analytics notice",
+      "href": "/analytics"
+    },
+    {
+      "label": "Photo improvement",
+      "href": "/photo-improvement"
+    }
+  ],
+  "support": {
+    "title": "How can we help?",
+    "email": "furkan@furkantitiz.dev",
+    "body": "Tell us what happened and which version of the app you are using. Please do not send passwords, payment details or sensitive photos.",
+    "topics": [
+      "Menu recognition and results",
+      "Account access",
+      "Subscriptions and restoring purchases",
+      "Privacy and data requests"
+    ],
+    "accountDeletionInstructions": null
+  },
+  "appStoreUrl": null,
+  "productionOrigin": null,
+  "releaseGates": [
+    "Confirm App Store URL and availability",
+    "Confirm both monthly plans and exact entitlements",
+    "Verify real screenshots and feature availability",
+    "Approve visual design",
+    "Finalize legal notices, retention, providers and account deletion instructions"
+  ],
+  "trial": {
+    "dishes": 3,
+    "recurring": false,
+    "requiresAccount": true
+  }
+}

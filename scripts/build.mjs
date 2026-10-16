@@ -1,0 +1,13 @@
+import { mkdir, rm, cp, readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const root = new URL('../', import.meta.url);
+const out = new URL('dist/', root);
+const content = JSON.parse(await readFile(new URL('src/content/landing.json', root), 'utf8'));
+if (content.language !== 'en' || content.trial.dishes !== 3 || content.trial.recurring !== false) throw new Error('Invalid product content');
+await rm(out, { recursive: true, force: true });
+await mkdir(out, { recursive: true });
+await cp(new URL('public/', root), out, { recursive: true });
+await cp(new URL('src/review/', root), new URL('review/', out), { recursive: true });
+await writeFile(new URL('index.html', out), `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Visual Plate — Design review</title><body><main><h1>Visual Plate · Design review</h1><p>Layout proposals. The production website has not been implemented or published.</p><ul><li><a href="/review/desktop.svg">Desktop composition</a></li><li><a href="/review/mobile.svg">Mobile composition</a></li></ul></main></body></html>`);
+await writeFile(new URL('robots.txt', out), 'User-agent: *\nDisallow: /\n');
+console.log(`Review build ready: ${fileURLToPath(out)}`);

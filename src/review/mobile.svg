@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="2420" viewBox="0 0 390 2420">
+<style>@font-face{font-family:Nunito;src:url(../brand/Nunito.ttf)}text{font-family:Nunito, sans-serif;fill:#1c1c1e}.muted{fill:#6b6b70}.white{fill:white}</style>
+<rect width="390" height="2420" fill="white"/>
+<text x="24" y="48" font-size="25" font-weight="800" class="">Visual Plate</text>
+<text x="24" y="91" font-size="11" font-weight="700" class="muted">DESIGN PROPOSAL · NOT A LIVE SITE</text>
+<text x="24" y="145" font-size="14" font-weight="600" class="muted">A little clarity before you order.</text>
+<text x="24" y="196" font-size="35" font-weight="800" class="">Meet your next</text>
+<text x="24" y="238" font-size="35" font-weight="800" class="">favorite dish.</text>
+<text x="24" y="278" font-size="17" font-weight="400" class="muted">Turn an unfamiliar menu into dishes</text>
+<text x="24" y="304" font-size="17" font-weight="400" class="muted">you can explore. Scan, see what’s</text>
+<text x="24" y="330" font-size="17" font-weight="400" class="muted">inside, and save your discoveries.</text>
+<rect x="24" y="374" width="300" height="54" rx="18" fill="#c44a37"/>
+<text x="46" y="408" font-size="17" font-weight="700" class="white">Coming to the App Store</text>
+<text x="24" y="457" font-size="14" font-weight="400" class="muted">Your first 3 dishes free with an</text>
+<text x="24" y="483" font-size="14" font-weight="400" class="muted">account.</text>
+<rect x="24" y="505" width="342" height="335" rx="40" fill="#fdede7"/>
+<image href="../brand/chef.png" x="88" y="520" width="215" height="215"/>
+<rect x="59" y="719" width="272" height="91" rx="18" fill="white"/>
+<text x="79" y="752" font-size="12" font-weight="700" class="muted">MENU → DISH DISCOVERY</text>
+<text x="79" y="785" font-size="18" font-weight="700" class="">A little less menu mystery.</text>
+<text x="24" y="906" font-size="26" font-weight="800" class="">A menu becomes a discovery.</text>
+<rect x="24" y="936" width="342" height="130" rx="24" fill="#f8f5ee"/>
+<text x="46" y="971" font-size="15" font-weight="700" class="muted">01</text>
+<text x="46" y="1005" font-size="21" font-weight="800" class="">Point at the menu</text>
+<text x="46" y="1034" font-size="15" font-weight="400" class="muted">Take a photo or choose one from</text>
+<text x="46" y="1060" font-size="15" font-weight="400" class="muted">your gallery.</text>
+<rect x="24" y="1086" width="342" height="130" rx="24" fill="#f8f5ee"/>
+<text x="46" y="1121" font-size="15" font-weight="700" class="muted">02</text>
+<text x="46" y="1155" font-size="21" font-weight="800" class="">Get to know the dishes</text>
+<text x="46" y="1184" font-size="15" font-weight="400" class="muted">Explore dish images and</text>
+<text x="46" y="1210" font-size="15" font-weight="400" class="muted">explanations.</text>
+<rect x="24" y="1236" width="342" height="130" rx="24" fill="#f8f5ee"/>
+<text x="46" y="1271" font-size="15" font-weight="700" class="muted">03</text>
+<text x="46" y="1305" font-size="21" font-weight="800" class="">Keep your discoveries</text>
+<text x="46" y="1334" font-size="15" font-weight="400" class="muted">Revisit opened results in your</text>
+<text x="46" y="1360" font-size="15" font-weight="400" class="muted">Library.</text>
+<text x="24" y="1441" font-size="29" font-weight="800" class="">Find your appetite</text>
+<text x="24" y="1479" font-size="29" font-weight="800" class="">for discovery.</text>
+<text x="24" y="1517" font-size="14" font-weight="400" class="muted">Two monthly options. Subscribe in the app.</text>
+<rect x="24" y="1551" width="342" height="195" rx="24" fill="#f8f5ee"/>
+<text x="47" y="1593" font-size="22" font-weight="800" class="">Everyday discovery</text>
+<text x="47" y="1631" font-size="15" font-weight="400" class="muted">Plan name, allowance and price</text>
+<text x="47" y="1657" font-size="15" font-weight="400" class="muted">pending confirmation.</text>
+<text x="47" y="1703" font-size="15" font-weight="700" class="">Available inside the app</text>
+<rect x="24" y="1766" width="342" height="195" rx="24" fill="#fdede7"/>
+<text x="47" y="1808" font-size="22" font-weight="800" class="">A little more to explore</text>
+<text x="47" y="1846" font-size="15" font-weight="400" class="muted">Plan name, allowance and price</text>
+<text x="47" y="1872" font-size="15" font-weight="400" class="muted">pending confirmation.</text>
+<text x="47" y="1918" font-size="15" font-weight="700" class="">Available inside the app</text>
+<text x="24" y="2041" font-size="26" font-weight="800" class="">Before you take a seat.</text>
+<text x="24" y="2093" font-size="15" font-weight="600" class="">What do I get for free?</text>
+<text x="24" y="2142" font-size="15" font-weight="600" class="">Do unused monthly dishes roll over?</text>
+<text x="24" y="2191" font-size="15" font-weight="600" class="">Can I revisit my opened results?</text>
+<text x="24" y="2276" font-size="24" font-weight="800" class="">Visual Plate</text>
+<text x="24" y="2311" font-size="13" font-weight="400" class="muted">Support · Terms · Privacy Analytics</text>
+<text x="24" y="2337" font-size="13" font-weight="400" class="muted">· Photo improvement</text>
+</svg>

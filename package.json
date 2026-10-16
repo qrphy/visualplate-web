@@ -1,0 +1,14 @@
+{
+  "name": "visualplate-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 4321 --bind 127.0.0.1 --directory dist",
+    "check": "node --check scripts/build.mjs"
+  }
+}
