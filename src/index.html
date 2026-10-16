@@ -73,7 +73,23 @@
                 fetchpriority="high"
               />
               <div class="phone-island" aria-hidden="true"></div>
-              <div class="demo-line" aria-hidden="true"></div>
+              <svg
+                class="menu-scan-overlay"
+                viewBox="0 0 786 1704"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <defs>
+                  <clipPath id="menu-paper-clip">
+                    <path
+                      d="M232 708 L470 686 L487 838 L460 858 L460 968 L261 986 Z"
+                    />
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#menu-paper-clip)">
+                  <path class="demo-line" d="M200 710 L520 676" />
+                </g>
+              </svg>
             </div>
           </div>
         </section>
@@ -110,9 +126,8 @@
                 <div class="paper-menu">
                   <span>THE MENU</span><i></i><b>Dish name</b><i></i
                   ><b>Description</b><i></i><b>Price</b>
+                  <div class="scan-corners"><i></i><i></i><i></i><i></i></div>
                 </div>
-                <div class="scan-corners"><i></i><i></i><i></i><i></i></div>
-                <div class="paper-scan"></div>
               </div>
               <div class="step-heading">
                 <span>01</span>
