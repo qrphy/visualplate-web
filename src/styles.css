@@ -1629,3 +1629,18 @@ h1 {
     letter-spacing: -0.7px;
   }
 }
+
+/* The white page slides away to reveal the footer beneath it. */
+.footer.footer-reveal {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+}
+.page-shell {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer.footer-reveal {
+    position: relative;
+  }
+}
