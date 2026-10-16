@@ -20,9 +20,9 @@
     }
   ],
   "hero": {
-    "eyebrow": "Good food starts with curiosity",
-    "title": "A new menu. A delicious discovery.",
-    "body": "A little clarity before you order. Scan a menu, get to know the dishes, and find your next favorite.",
+    "eyebrow": "",
+    "title": "See what’s on the menu.",
+    "body": "Scan a menu to see dish images and descriptions before you order.",
     "cta": "Get Visual Plate",
     "prelaunch": "Coming to the App Store",
     "note": "Create an account to explore your first 3 dishes free."
@@ -42,7 +42,7 @@
     }
   ],
   "features": {
-    "title": "Less guessing. More discovering.",
+    "title": "Explore dishes before you order.",
     "items": [
       "Explore dishes from a menu",
       "Keep opened results in your Library",
@@ -50,7 +50,7 @@
     ]
   },
   "plans": {
-    "title": "Find your appetite for discovery.",
+    "title": "Two monthly plans.",
     "body": "Two monthly options. Subscribe in the app.",
     "items": [
       {
@@ -102,7 +102,7 @@
     }
   ],
   "closing": {
-    "title": "A new menu. A little more confidence.",
+    "title": "Explore menus with Visual Plate.",
     "cta": "Get Visual Plate"
   },
   "footer": [
