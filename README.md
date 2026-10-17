@@ -29,4 +29,4 @@ Canonical progress: `/Users/furkan/brain/projects/visualplate/syntheses/mvp-webs
 
 Brand assets copied from the existing VisualPlateApp resources, preserving originals. Font license verification remains a WEB04 release requirement; copying an existing asset is not a new rights determination.
 
-The fixed desktop download card reserves the QR placement. Until a real App Store target is verified, it shows the app icon and “QR available at launch” instead of a fake code. It hides at the footer and on tablet/mobile to avoid covering content. The phone uses the original supplied Figma Scan export, not a live app capture. The scanning line is a local CSS demo; no AI/backend requests occur.
+The fixed desktop download card reserves the QR placement. Until a real App Store target is verified, it shows the app icon and “QR available at launch” instead of a fake code. It hides at the footer and on tablet/mobile to avoid covering content. The phone uses a current simulator capture of the Scan screen with “Try 5 dishes”; older Figma exports remain design references. The scanning line is a local CSS demo; no AI/backend requests occur.

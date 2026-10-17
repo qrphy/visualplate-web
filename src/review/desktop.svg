@@ -11,7 +11,7 @@
 <text x="100" y="447" font-size="20" font-weight="400" class="muted">Scan, see what’s inside, and save your discoveries.</text>
 <rect x="100" y="535" width="286" height="54" rx="18" fill="#c44a37"/>
 <text x="122" y="569" font-size="17" font-weight="700" class="white">Coming to the App Store</text>
-<text x="100" y="626" font-size="16" font-weight="400" class="muted">Your first 3 dishes free with an account.</text>
+<text x="100" y="626" font-size="16" font-weight="400" class="muted">Your first 5 dishes free with an account.</text>
 <rect x="835" y="153" width="490" height="494" rx="64" fill="#fdede7"/>
 <image href="../brand/chef.png" x="960" y="175" width="280" height="280"/>
 <rect x="876" y="441" width="405" height="151" rx="24" fill="white"/>

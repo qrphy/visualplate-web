@@ -25,7 +25,7 @@
     "body": "Scan a menu to see dish images and descriptions before you order.",
     "cta": "Get Visual Plate",
     "prelaunch": "Coming to the App Store",
-    "note": "Create an account to explore your first 3 dishes free."
+    "note": "Create an account to explore your first 5 dishes free."
   },
   "howItWorks": [
     {
@@ -74,11 +74,11 @@
   "faq": [
     {
       "q": "What do I get for free?",
-      "a": "Create an eligible new account to receive a one-time allowance for 3 dish results. This is not a recurring allowance or an automatically renewing subscription trial."
+      "a": "Create an eligible new account to receive a one-time allowance for 5 dish results. This is not a recurring allowance or an automatically renewing subscription trial."
     },
     {
       "q": "Does one menu use one allowance?",
-      "a": "Your allowance counts dish results, not menu photos. For example, with 3 dishes remaining, a menu with 4 dishes can show 3 opened results and a locked fourth result."
+      "a": "Your allowance counts dish results, not menu photos. For example, with 5 dishes remaining, a menu with 6 dishes can show 5 opened results and a locked sixth result."
     },
     {
       "q": "Do I need an account?",
