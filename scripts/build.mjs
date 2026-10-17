@@ -7,7 +7,7 @@ const content = JSON.parse(
 );
 if (
   content.language !== "en" ||
-  content.trial?.dishes !== 3 ||
+  content.trial?.dishes !== 5 ||
   content.trial?.recurring !== false
 )
   throw new Error("Invalid product content");

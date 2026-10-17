@@ -149,7 +149,7 @@
     "Finalize legal notices, retention, providers and account deletion instructions"
   ],
   "trial": {
-    "dishes": 3,
+    "dishes": 5,
     "recurring": false,
     "requiresAccount": true
   }
