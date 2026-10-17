@@ -26,7 +26,27 @@ const faq = content.faq
       `<details><summary>${escape(q)}</summary><p>${escape(a)}</p></details>`,
   )
   .join("\n");
-const home = template.replace("{{FAQ}}", faq);
+const expectedPlans = [
+  { name: "Standard", price: 4.99, quota: 100 },
+  { name: "Plus", price: 9.99, quota: 300 },
+];
+if (content.plans.items.length !== expectedPlans.length) throw new Error("Expected two launch plans");
+const plans = content.plans.items.map((plan, index) => {
+  const expected = expectedPlans[index];
+  if (plan.publicName !== expected.name || plan.price !== expected.price ||
+      plan.monthlyDishAllowance !== expected.quota || plan.currency !== "USD" ||
+      plan.billingPeriod !== "month" || plan.detailEntitlements !== "basic" ||
+      JSON.stringify(plan.features) !== JSON.stringify(content.plans.items[0].features)) {
+    throw new Error("Plan does not match the approved launch offer");
+  }
+  return `<article class="plan-card${index === 1 ? " plan-more" : ""}">
+    <h3>${escape(plan.publicName)}</h3>
+    <p>US$${escape(plan.price.toFixed(2))} / month</p>
+    <p>${escape(plan.monthlyDishAllowance)} dish results per billing period.</p>
+    <ul>${plan.features.map(feature => `<li>${escape(feature)}</li>`).join("")}</ul>
+  </article>`;
+}).join("\n");
+const home = template.replace("{{FAQ}}", faq).replace("{{PLANS}}", plans);
 if (home.includes("{{")) throw new Error("Unresolved template token");
 await rm(out, { recursive: true, force: true });
 await mkdir(out, { recursive: true });

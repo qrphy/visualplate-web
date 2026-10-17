@@ -9,7 +9,7 @@
 
 Visual Plate is an iPhone app for exploring unfamiliar dishes. Take a menu photo or choose one from your gallery to discover dish images and descriptions, then revisit opened results and save favorites in your Library.
 
-Eligible new accounts receive a **one-time allowance for 5 dish results**. The allowance counts opened dishes, not menu photos; it is not a recurring subscription trial. Subscriptions and purchase restoration are handled inside the iPhone app.
+Eligible new accounts receive a **one-time allowance for 5 dish results**. The allowance counts opened dishes, not menu photos; it is not a recurring subscription trial. Standard includes **100 dish results for US$4.99/month**; Plus includes **300 for US$9.99/month**. Both plans include the same features, including all profile characters and app icons. Allowances renew each billing period without rollover. Local App Store prices may vary. Subscriptions and purchase restoration are handled inside the iPhone app.
 
 <p align="center">
   <img src="public/screens/scan.png" width="280" alt="Visual Plate Scan screen offering five free dish results">
@@ -51,7 +51,7 @@ Routes: `/`, `/support`, `/terms`, `/privacy`, `/analytics`, `/photo-improvement
 
 ## Publication status
 
-The App Store link and final subscription catalog are pending. Legal routes display an explicit unpublished notice until final policies are approved. The build currently blocks search-engine indexing. App screenshots and illustrative scanning animation do not make AI requests from the website.
+The App Store link and App Store Connect configuration/purchase verification are pending. The approved US launch offer is reflected on the site. Legal routes display an explicit unpublished notice until final policies are approved. The build currently blocks search-engine indexing. App screenshots and illustrative scanning animation do not make AI requests from the website.
 
 Brand assets come from Visual Plate’s app resources. Bundling these assets does not grant permission to reuse the Visual Plate name or artwork. Font license verification remains a release requirement.
 

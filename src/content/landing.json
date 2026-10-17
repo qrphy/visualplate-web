@@ -55,21 +55,40 @@
     "items": [
       {
         "id": "entry",
-        "publicName": null,
-        "price": null,
-        "monthlyDishAllowance": null,
-        "detailEntitlements": null
+        "publicName": "Standard",
+        "price": 4.99,
+        "monthlyDishAllowance": 100,
+        "detailEntitlements": "basic",
+        "currency": "USD",
+        "billingPeriod": "month",
+        "features": [
+          "Dish images and descriptions",
+          "Typical ingredients and available nutrition notes",
+          "Revisit and save opened results in Library",
+          "All profile characters and app icons"
+        ]
       },
       {
         "id": "higher",
-        "publicName": null,
-        "price": null,
-        "monthlyDishAllowance": null,
-        "detailEntitlements": null
+        "publicName": "Plus",
+        "price": 9.99,
+        "monthlyDishAllowance": 300,
+        "detailEntitlements": "basic",
+        "currency": "USD",
+        "billingPeriod": "month",
+        "features": [
+          "Dish images and descriptions",
+          "Typical ingredients and available nutrition notes",
+          "Revisit and save opened results in Library",
+          "All profile characters and app icons"
+        ]
       }
     ],
-    "premiumCharacterPlanMapping": null,
-    "releaseNote": "Names, pricing, allowances, extra details and character entitlements must match the confirmed StoreKit catalog before publication."
+    "premiumCharacterPlanMapping": [
+      "entry",
+      "higher"
+    ],
+    "releaseNote": "Approved US launch prices. Local App Store pricing may vary. Both plans have the same features; allowances renew each billing period and do not roll over."
   },
   "faq": [
     {
@@ -87,6 +106,10 @@
     {
       "q": "What happens to unused monthly dishes?",
       "a": "Monthly allowances reset with the subscription period. Unused allowance does not roll over."
+    },
+    {
+      "q": "How do Standard and Plus differ?",
+      "a": "Both plans include the same features. Standard includes 100 dish results for US$4.99 per month; Plus includes 300 for US$9.99 per month. Prices vary by country or region; the app shows your local App Store price before purchase. Failed recognition does not use a dish allowance, and rereading an opened result does not use another allowance."
     },
     {
       "q": "Can I revisit results after my subscription ends?",
@@ -143,7 +166,7 @@
   "productionOrigin": null,
   "releaseGates": [
     "Confirm App Store URL and availability",
-    "Confirm both monthly plans and exact entitlements",
+    "Configure and verify approved prices in App Store Connect and test purchase/restore",
     "Verify real screenshots and feature availability",
     "Approve visual design",
     "Finalize legal notices, retention, providers and account deletion instructions"
