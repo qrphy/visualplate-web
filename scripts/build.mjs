@@ -1,3 +1,5 @@
+import { marked } from "marked";
+import { createHash } from "node:crypto";
 import { mkdir, rm, cp, readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 const root = new URL("../", import.meta.url);
@@ -53,20 +55,27 @@ await mkdir(out, { recursive: true });
 await cp(new URL("public/", root), out, { recursive: true });
 await cp(new URL("src/review/", root), new URL("review/", out), {
   recursive: true,
+  // Legal release candidates are local review material, not active public policies.
+  filter: (source) => !source.includes("/src/review/legal"),
 });
 await cp(new URL("src/styles.css", root), new URL("styles.css", out));
 await cp(new URL("src/site.js", root), new URL("site.js", out));
 await writeFile(new URL("index.html", out), home);
 const support = `<p>${escape(content.support.body)}</p><p><a href="mailto:${escape(content.support.email)}">${escape(content.support.email)}</a></p><ul>${content.support.topics.map((topic) => `<li>${escape(topic)}</li>`).join("")}</ul><p>You can manage an Apple subscription in your Apple account settings. Include a description of the issue when asking about purchase restoration.</p>`;
-const previewNotice =
-  '<p>This page is reserved for the launch version of Visual Plate. The final notice is being prepared and is not published in this design preview.</p><p>For questions, contact <a href="mailto:furkan@furkantitiz.dev">furkan@furkantitiz.dev</a>.</p>';
-const routes = [
-  ["support", "How can we help?", support],
-  ["terms", "Terms of use", previewNotice],
-  ["privacy", "Privacy policy", previewNotice],
-  ["analytics", "Analytics notice", previewNotice],
-  ["photo-improvement", "Photo improvement", previewNotice],
-];
+const legalVersion = "2026-10-21";
+const pinnedLegalHashes = JSON.parse(await readFile(new URL(`src/legal/${legalVersion}/sha256.json`, root), "utf8"));
+const legalTitles = { terms: "Terms of Use", privacy: "Privacy Policy", analytics: "Analytics Notice", "photo-improvement": "Photo Improvement Notice", "ai-processing": "AI Processing Notice" };
+const routes = [["support", "How can we help?", support]];
+const legalBodies = {};
+for (const [slug, title] of Object.entries(legalTitles)) {
+  const markdown = await readFile(new URL(`src/legal/${legalVersion}/${slug}.md`, root), "utf8");
+  if (!markdown.includes("Effective: 21 October 2026") || /release-candidate|\[BEFORE PUBLICATION\]/.test(markdown)) throw new Error(`Unreleased legal document: ${slug}`);
+  const body = marked.parse(markdown.replace(/^# .*\n/, ""));
+  legalBodies[slug] = body;
+  routes.push([slug, title, body]);
+}
+routes.push(["terms-privacy", "Terms of Use and Privacy Policy", `<h2>Terms of Use</h2>${legalBodies.terms}<hr><h2>Privacy Policy</h2>${legalBodies.privacy}`]);
+for (const [slug, title, body] of [...routes].filter(([slug]) => slug !== "support")) routes.push([`legal/${legalVersion}/${slug}`, title, body]);
 for (const [slug, title, body] of routes) {
   const page = home
     .replace(
@@ -77,10 +86,13 @@ for (const [slug, title, body] of routes) {
       /<main id="main">[\s\S]*?<\/main>/,
       `<main id="main" class="legal-main wrap"><p class="eyebrow">VISUAL PLATE</p><h1>${escape(title)}</h1>${body}<a class="back-link" href="/">← Back to Visual Plate</a></main>`,
     );
+  // Stable consent shell: subsequent landing-page changes must not alter its hash.
+  const immutablePage = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(title)} — Visual Plate</title><style>body{font:17px/1.65 system-ui,sans-serif;color:#242424;max-width:780px;margin:auto;padding:28px 20px}h1,h2{line-height:1.25}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border:1px solid #ddd;padding:10px;text-align:left;vertical-align:top}a{color:#a13224;overflow-wrap:anywhere}@media(max-width:540px){table{display:block;overflow-x:auto}}</style></head><body><main><h1>${escape(title)}</h1>${body}</main></body></html>\n`;
+  if (slug.startsWith("legal/") && createHash("sha256").update(immutablePage).digest("hex") !== pinnedLegalHashes[slug.split("/").at(-1)]) throw new Error(`Immutable consent content changed: ${slug}; publish a new version instead`);
   await mkdir(new URL(`${slug}/`, out), { recursive: true });
   await writeFile(
     new URL(`${slug}/index.html`, out),
-    page.replaceAll('href="#', 'href="/#'),
+    slug.startsWith('legal/') ? immutablePage : page.replaceAll('href="#', 'href="/#'),
   );
 }
 await writeFile(

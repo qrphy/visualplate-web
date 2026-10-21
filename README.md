@@ -57,4 +57,8 @@ Brand assets come from Visual Plate’s app resources. Bundling these assets doe
 
 ## Support
 
-For app, account, subscription or privacy questions, contact [furkan@furkantitiz.dev](mailto:furkan@furkantitiz.dev). Please do not send passwords, payment details or sensitive photos.
+For app, account, subscription or privacy questions, contact [visualplate800@gmail.com](mailto:visualplate800@gmail.com). Please do not send passwords, payment details or sensitive photos.
+
+### Legal documents
+
+Published policy sources are in `src/legal/`. Versioned HTML and pinned hashes preserve the documents linked to consent records. Local review drafts are excluded from production builds. Support: visualplate800@gmail.com.
