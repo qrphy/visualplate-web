@@ -63,7 +63,7 @@ await cp(new URL("src/site.js", root), new URL("site.js", out));
 await writeFile(new URL("index.html", out), home);
 const support = `<p>${escape(content.support.body)}</p><p><a href="mailto:${escape(content.support.email)}">${escape(content.support.email)}</a></p><ul>${content.support.topics.map((topic) => `<li>${escape(topic)}</li>`).join("")}</ul><p>You can manage an Apple subscription in your Apple account settings. Include a description of the issue when asking about purchase restoration.</p>`;
 const legalVersion = "2026-10-21";
-const privacyVersion = "2026-10-22";
+const privacyVersion = "2026-10-22-google";
 const privacyHashes = JSON.parse(await readFile(new URL(`src/legal/${privacyVersion}/sha256.json`, root), "utf8"));
 const pinnedLegalHashes = JSON.parse(await readFile(new URL(`src/legal/${legalVersion}/sha256.json`, root), "utf8"));
 const legalTitles = { terms: "Terms of Use", privacy: "Privacy Policy", analytics: "Analytics Notice", "photo-improvement": "Photo Improvement Notice", "ai-processing": "AI Processing Notice" };
