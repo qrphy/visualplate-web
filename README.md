@@ -57,7 +57,7 @@ Brand assets come from Visual Plate’s app resources. Bundling these assets doe
 
 ## Support
 
-For app, account, subscription or privacy questions, contact [visualplate800@gmail.com](mailto:hello@visualplate.app). Please do not send passwords, payment details or sensitive photos.
+For app, account, subscription or privacy questions, contact [hello@visualplate.app](mailto:hello@visualplate.app). Please do not send passwords, payment details or sensitive photos.
 
 ### Legal documents
 
